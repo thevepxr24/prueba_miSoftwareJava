@@ -4,6 +4,7 @@ Descargar el repositorio
 en Netbeans o IntelliJ abrir el proyecto
 demo-java-general
 descargar las librerias Maven
+Este proyecto se construyo con *Java 17*
 
 Antes de ejecutar el programa abrir en Postgres
 una base de datos llamada misoftware
@@ -52,13 +53,16 @@ Ejecutar el programa en SpringBoot
 
 Se hicieron las pruebas de validacion de la tabla usuarios con Postman
 GET> http://localhost:9091/irvingrocha/api/v1/usuarios/
+---------------------------------------------------------
 GET> http://localhost:9091/irvingrocha/api/v1/usuarios/todos
+---------------------------------------------------------
 POST> http://localhost:9091/irvingrocha/api/v1/usuarios
 {
     "name":"postman",
     "year":"2",
     "email":"postman@postman.com"
 }
+---------------------------------------------------------
 //Cambiar el id por el que devuelva
 PUT> http://localhost:9091/irvingrocha/api/v1/usuarios
 {
@@ -67,8 +71,38 @@ PUT> http://localhost:9091/irvingrocha/api/v1/usuarios
     "year":"2",
     "email":"postman@postman.com"
 }
+---------------------------------------------------------
 //Cambiar el id por el que desee eliminar
 DELETE>http://localhost:9091/irvingrocha/api/v1/usuarios/1
+---------------------------------------------------------
+Frontend con React v17
+En Visual Code abrir la carpeta usuarios-app
+Abrir una terminal e instalar los paquetes de node necesarios
+PM> npm install
+PM> npm audit fix --force
+-----------------------------------------------
+Una vez instalados correr el program
+PM> npm run dev
+
+Para este punto deberan estan ejecutandose la API en Springboot y el proyecto de React
+
+Abrir su navegador web en http://localhost:5173/
+
+Puede navegar a registro o Usuarios
+--------------------
+Registro
+Puede dar de alta a una persona o usuario
+-----------------------------------
+Usuarios
+Puede ver todos los usuarios registrados,
+Modificar nombre, email y edad
+Puede eliminar algun usuario
+
+
+
+
+
+
 
 
 
